@@ -1,0 +1,312 @@
+/* Basic Requirements */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+body{
+    background-color: #efefef;
+    color: #252525;
+}
+
+/* Nav Bar */
+nav{
+    width: 100%;
+    height: 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    background-color: #ffff;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
+    z-index: 1;
+}
+
+.nav-left{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 1rem;
+}
+
+.nav-left .logo{
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
+#Search{
+    font-size: 1rem;
+    background-color: #f4f6f9;
+    border: none;
+    border-radius: 20px;
+    height: 2rem;
+}
+@media screen and (min-width:1030px) {
+    .nav-left i{
+        display: none;
+    }
+    
+}
+@media only screen and (max-width:1030px) {
+    .nav-left i{
+        background-color: #efefef;
+        width: 2.4rem;
+        height: 2.5rem;
+        border-radius: 50%;
+        margin-left: 0.5rem;
+        font-size: 1.3rem;
+        padding: 0.6rem;
+    }
+    .nav-left input[type=text]{
+        display: none;
+    }
+}
+
+.nav-mid{
+    margin-right: 2rem;
+}
+.nav-mid i{
+    width: 10%;
+    background: none;
+    border-radius: 10%;
+    margin-left: 0.5rem;
+    font-size: 1.3rem;
+    padding: 0.6rem;
+    color: #646262;
+    margin-right: 2rem;
+}
+
+.nav-mid a{
+    text-decoration: none;
+}
+
+.nav-mid i:hover{
+    background-color: #e9ebef;
+}
+
+@media screen  and (min-width:770px){
+    .nav-mid .fa-bars{
+            display: none;
+        }
+}
+
+@media screen and (max-width:770px) {
+    .nav-mid a{
+        display: none;
+    }
+    
+    .nav-mid .fa-bars{
+    background-color: #efefef;
+    width: 2.4rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    margin-left: 0.5rem;
+    font-size: 1.3rem;
+    padding: 0.6rem;
+    }
+
+    .nav-right .fa-bars{
+        display: none;
+    }
+}
+
+@media screen and (max-width:364px) {
+    .nav-right i{
+        display: none;
+    }
+}
+.nav-right{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-right img{
+    width: 2.5rem;
+    height: 2.5rem;
+    object-fit: cover;
+    object-position: center;
+    margin-right: 1rem;
+    border-radius: 50%;
+    margin-left: 0.5rem;
+}
+
+.nav-right i{
+    background-color: #efefef;
+    width: 2.4rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    margin-left: 0.5rem;
+    font-size: 1.3rem;
+    padding: 0.6rem;
+    
+}
+
+.nav-right i:hover{
+    background-color: #e9ebef;
+    cursor: pointer;
+}
+
+/* Header */
+.profile-header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 70vh;
+}
+
+.profile-cover{
+    position: relative;
+    align-items: center ;
+    width: 80%;
+    height: 80%;
+    overflow: hidden;
+}
+
+.profile-cover img{
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+    height: 70%;
+    border-bottom-left-radius: 2%;
+    border-bottom-right-radius: 2%;
+    box-shadow:  0 2px 4px 0 rgba(0,0,0,.2);
+}
+
+.profile-pic{
+    position: absolute;
+    top: 32%;
+    width: 13%;
+    height: 27%;
+    border-radius: 50%;
+    left: 13%;
+    
+}
+
+.profile-pic img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+    border: 4px solid white;
+}
+
+@media screen and (max-width:770px) {
+    .profile-pic img{
+        display: none;
+    }
+}
+
+.profile-info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    float: right;
+}
+
+.profile-info p{
+    margin: 1rem;
+    font-size: 26px;
+    font-weight: 600;
+}
+
+.profile-edit{
+    text-align: center;
+    padding: 1rem;
+    color: black;
+    cursor: pointer;
+}
+
+#add{
+    background-color: rgb(35, 35, 182);
+    border: none;
+    height: 2rem;
+    width: 8rem;
+    color: white;
+    border-radius: 10px;
+}
+
+#edit{
+    background-color: rgb(182, 182, 182);
+    border: none;
+    height: 2rem;
+    width: 8rem;
+    color: black;
+    border-radius: 10px;
+}
+
+@media screen and (max-width:770px){
+    .profile-info{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:565px) {
+    .profile-edit{
+        display: none;
+    }    
+}
+
+
+.profile-menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    flex-wrap: wrap;
+
+}
+
+.menu-left ul li{
+    display: inline-block;
+    list-style:none;
+    margin:10px 20px;
+}
+
+.menu-right i{
+    background-color: #c0bbbb;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 30%;
+    font-size: 1.5rem;
+    padding: 0.3rem;
+}
+
+.menu-left ul li:hover{
+    background-color: #bbbdc1;
+    cursor: pointer;
+}
+
+.profile-intro{
+    text-align: left;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.intro{
+    margin: 0.3rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    border-radius: 10px;
+    background-color: white;
+}
+
+.intro ul li{
+    list-style: none    ;
+}
+
+@media screen and (max-width:808px) {
+    .menu-left{
+        display: none;
+    }
+}
